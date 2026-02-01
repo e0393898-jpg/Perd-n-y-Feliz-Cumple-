@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Perdón y Feliz Cumple 🎉</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .card {
+      background: white;
+      max-width: 420px;
+      padding: 25px;
+      border-radius: 18px;
+      text-align: center;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+      animation: aparecer 1s ease;
+    }
+
+    h1 {
+      margin-top: 0;
+      color: #ff4d6d;
+    }
+
+    p {
+      color: #333;
+      font-size: 16px;
+      line-height: 1.5;
+    }
+
+    .emoji {
+      font-size: 40px;
+      margin: 10px 0;
+    }
+
+    button {
+      margin-top: 15px;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 12px;
+      background: #ff4d6d;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+      transition: transform 0.2s, background 0.2s;
+    }
+
+    button:hover {
+      background: #e63e5c;
+      transform: scale(1.05);
+    }
+
+    @keyframes aparecer {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card" id="contenido">
+    <div class="emoji">🥺🎂</div>
+    <h1>Perdón 😭</h1>
+    <p>
+      La neta perdón si me confundí con tu cumple,<br>
+      vi los estados y me cuatrapie😅<br><br>
+      Pero lo que sí sé es que:
+    </p>
+
+    <button onclick="mostrarFelicitar()">👉 Toca aquí</button>
+  </div>
+
+  <script>
+    function mostrarFelicitar() {
+      document.getElementById("contenido").innerHTML = `
+        <div class="emoji">🎉🎈</div>
+        <h1>¡Feliz Cumple! 🥳</h1>
+        <p>
+          Espero que te la pases increíble hoy (o mañana :V),<br>
+          que te consientan un chorro y que<br>
+          se te cumpla todo lo que quieres 💖<br><br>
+          Gracias por ser tan cool ✨
+          Gracias Aylani.
+        </p>
+        <div class="emoji">🎂💫</div>
+      `;
+    }
+  </script>
+
+</body>
+</html>
